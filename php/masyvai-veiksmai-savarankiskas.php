@@ -42,18 +42,15 @@ echo simboliu_skaicius ($masyvas) . '<br>';
 
 
 
-
+$masyvas = ['dell', 'alienware', 'packard bell', 'asus'];
 
 function skaiciuoja($h){
     $z=0;
-    for($b=0; $b<count($h); $b++){
+    for($b=0; $b<count($h); $b++)$z += sqrt($h[$b]);
         return $z;
-    } $z += sqrt($h[$b]);
+    }
 
-}
-$g = ['1', '2', '3', '4'];
-$rezultatas = $skaiciuoja($g);
-echo skaiciuoja ($h) . '<br>';
+echo json_encode($masyvas) . '<br>';
 
 
 

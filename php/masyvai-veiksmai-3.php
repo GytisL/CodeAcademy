@@ -39,7 +39,7 @@ for ($i=0; $i<count($m); $i++){
     $nm[] = ucwords($s);// pirmas raides padaro didziosiomis
     $nmd[] = strtoupper($s); //visas raides pavercia didziosiomis
     $nmp[] = str_replace( 'a', '*', $s); //visas a raides pakeis i zvaigzdutes. *
-    $nm1[] = $s . '-' . strlen($s);//skaiciuoja zenklu skaiciu ir paraso salia - ir skiaciu
+    $nm1[] = $s . '-' . strlen($s);//skaiciuoja zenklu skaiciu ir paraso salia - ir skaiciu
     $nmx[] = $s . '-' . strpos($s,'a');//iesko kurioj pozicijoj yra a raide siuo atveju. pradeda skaiciuoti nuo nulio
     $nms[] = str_shuffle($s);
 }
