@@ -12,3 +12,4 @@ class savarankiskas_serviso_klase extends savarankiskas_automobilio_klase
         }
     }
 }
+?>
