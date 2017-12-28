@@ -15,9 +15,9 @@ $res->closeCursor();//uzdaro paieskos rezultato sriti
 $sql = "select * from auto";
 $res = $cnn->query($sql);
 echo '<table>';
-while ($row=$res->fetch()) {
+while ($row=$res->fetch()) {//fetch ideda viena cursor eilute ir grazina kintamaji. priskiria is res i row ir priskiriama fetch.
     echo '<tr>';
-    echo '<td>' . $row['aut_gamintojas'] . '</td>>';
+    echo '<td>' . $row['aut_gamintojas'] . '</td>>';//row yra masyvas
     echo '<td>' . $row['aut_modelis'] . '</td>>';
     echo '<td>' . $row['aut_metai'] . '</td>>';
     echo '<td>' . $row['aut_kaina'] . '</td>>';
