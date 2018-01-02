@@ -3,14 +3,12 @@
 class automobiliai
 {
     public $sarasas;
-
     function saras($gamintojas, $modelis, $kuras, $kuroSanaudos)
     {
         if (!isset($this->sarasas))
             $this->sarasas = [];
         $this->sarasas [] = ['ga' => $gamintojas, 'mo' => $modelis, 'ku' => $kuras, 'sa' => $kuroSanaudos];
     }
-
     function kuroVidurkisDyzelis()
     {
         $sum = 0;
@@ -20,12 +18,9 @@ class automobiliai
                 $sum += $this->sarasas[$i]['sa'];
                 $kiek += 1;
             }
-
         }
         return $sum / $kiek;
-
     }
-
     function kuroVidurkisBenzinas()
     {
         $sum = 0;
@@ -35,7 +30,6 @@ class automobiliai
                 $sum += $this->sarasas[$i]['sa'];
                 $kiek += 1;
             }
-
         }
         return $sum / $kiek;
     }

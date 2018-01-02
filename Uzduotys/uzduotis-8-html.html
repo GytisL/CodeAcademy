@@ -1,0 +1,70 @@
+<!--
+    Sukurkite HTML domkumenta, kurio <head> skiltyje butu aprasytas stilius. Visas dokumento fonas paveikslelis, teksto dydis 40px ir balta spalva. Dokumente turetu buti isvesta 3x3 lentele  sudaryta is <div> elementu, t.y. Div langeliai div eilutese, sios pagrindiniam div elemente. Eilutes lenteleje turi buti su parastemis 5px, langeliai lentelese savo ruostu taip pat su 5px parastemis. Langeliu fono spalva turi buti lightgreen.
+    -->
+    <!--id='abc' sitam tagui yra suteiktas unikalus kodas ir jis negali pasikartoti.
+    class="abc def"  - skirtas uzdeti klasei ir ju galima deti kiek nori-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<style>
+    body {
+        background:url("/images/Paveiksliukas.png") no-repeat;
+        background-size: cover;
+
+    /*background-image: url(/images/Paveiksliukas.png);
+        font-size: 40px;*/
+    }
+    .lentele1{
+        display: table;
+        border-spacing: 0px 5px;
+    }
+    .tr{
+        display: table-row;
+        text-align: center;
+    }
+    .td{
+        display: table-cell;
+        color: white;
+        background-color: lightgreen;
+    }
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+<div class="lentele1">
+    <div class="tr">
+        <div class="td">1</div>
+        <div class="td">1</div>
+        <div class="td">1</div>
+    </div>
+
+
+        <div class="tr">
+            <div class="td">2</div>
+            <div class="td">2</div>
+            <div class="td">2</div>
+        </div>
+
+
+        <div class="tr">
+            <div class="td">3</div>
+            <div class="td">3</div>
+            <div class="td">3</div>
+        </div>
+</div>
+
+
+
+
+
+</body>
+</html>
