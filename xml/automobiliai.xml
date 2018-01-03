@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+    <row>
+        <gamintojas>Honda</gamintojas>
+        <modelis>Civic</modelis>
+        <metai>2007</metai>
+    </row>
+    <row id="bmw">
+        <gamintojas>BMW</gamintojas>
+        <modelis>550</modelis>
+        <metai>2005</metai>
+    </row>
+    <row id="lexus">
+        <gamintojas>Lexus</gamintojas>
+        <modelis>LS430</modelis>
+        <metai>2004</metai>
+    </row>
+</table>
