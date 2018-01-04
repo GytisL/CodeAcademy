@@ -1,12 +1,10 @@
 <?php
-
 // Declare the interface 'iTemplate'
 interface iTemplate
 {
     public function setVariable($name, $var);
     public function getHtml($template);
 }
-
 // Implement the interface
 // This will work
 class Template implements iTemplate
@@ -19,7 +17,6 @@ class Template implements iTemplate
         //echo 'Labas';
         var_dump($this->vars);
     }
-
     public function getHtml($template)
     {
         foreach($this->vars as $name => $value) {
