@@ -1,39 +1,56 @@
 <?php
-
 class auto {
     public $message = '';
     private $cnn = false;
-    //private $host = 'test.lt';
-    //private $dbname = 'test';
-    //private $userid = '';
-    //private $password = 'test';
+    private $host = 'test.lt';
+    private $dbname = 'test';
+    private $userid = '';
+    private $password = 'test';
     function __construct(){
-            //$this->message = "Prisijungimas prie DB ";
+            $this->message = "Prisijungimas prie DB ";
         try{
             $this->cnn = new PDO('mysql:host=test.lt;dbname=test', 'root');
             //$this->cnn = new PDO("mysql:host={$this->host}; dbname={$this->dbname}", $this->userid, $this->password);
             $this->cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->message .= "Prisijungimas sekmingas ";
+            $this->message .= "Prisijungimas sėkmingas: ";
         }
-            catch(PDOException $err){
-            $this->message = "Prisijungimas nesekmingas: " . $err->getMessage();
+            catch(PDOException $e){
+            $this->message = "Prisijungimas nesėkmingas: " . $e->getMessage();
         }
     }
     function getList(){
-        $this->message = "Automobiliu saraso skaitymas is DB";
-        $cars =
-            
-        return [
-            ['id' => '1', 'gamintojas' => 'Bmw', 'modelis' => '750Li', 'autMetai' => '1996'],
-            ['id' => '2', 'gamintojas' => 'Audi', 'modelis' => 'RS7', 'autMetai' => '2017'],
-            ['id' => '3', 'gamintojas' => 'Lada', 'modelis' => '11', 'autMetai' => '1980'],
-            ['id' => '4', 'gamintojas' => 'Mercedes-Benz', 'modelis' => 'E350 AMG', 'autMetai' => '2015'],
-        ];
+        $this->message = "Automobilių sarašo skaitymas iš DB";
+        $cars = [];
+        try {
+            $sql = "select * from auto order by aut_gamintojas, aut_modelis";
+            $res = $this->cnn->query($sql);
+            while ($row = $res->fetch()) {
+                $cars[] = [
+                    'id' => $row['aut_id'],
+                    'gamintojas' => $row['aut_gamintojas'],
+                    'modelis' => $row['aut_modelis'],
+                    'metai' => $row['aut_metai'],
+                    'kaina' => $row['aut_kaina'],
+                    'nuotrauka' => $row['aut_nuotrauka'],
+                    'mime' => $row['aut_mime']
+                ];
+            }
+            $this->message .= "Prisijungimas sėkmingas";
+        }
+        catch(PDOException $e) {
+            $this->message .= 'Prisijungimas nesėkmingas: ' . $e->getMessage();
+            $cars = false;
+        }
+        return $cars;
+    }
+    function delete($id){
+
+
     }
 }
-$a = new auto();
-var_dump($a);
-$b = $a->getList();
-var_dump($b);
+//$a = new auto();
+//var_dump($a);
+//$b = $a->getList();
+//var_dump($b);
 
 ?>

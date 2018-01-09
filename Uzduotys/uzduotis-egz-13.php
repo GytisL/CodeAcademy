@@ -67,20 +67,18 @@ class universitetas{
     public $pavadinimas;
     public $miestas;
     public $studentai;
-    public $info;
-    function __construct($pp1, $pp2, $pp3, $pp4){
+    function __construct($pp1, $pp2, $pp3){
         $this->pavadinimas = $pp1;
         $this->miestas = $pp2;
         $this->studentai = $pp3;
-        $this->info = $pp4;
     }
-    function savybes(){
-        $un = "Pavadinimas: %s, Miestas: %s, Studentai: %s, Info: %s";
-        return sprintf($un, $this->pavadinimas, $this->miestas, $this->studentai, $this->info);
+    function info(){
+        $un = "Pavadinimas: %s, Miestas: %s, Studentai: %s";
+        return sprintf($un, $this->pavadinimas, $this->miestas, $this->studentai);
     }
 }
-$nnn = new universitetas('LSMU', 'Kaunas', '20', 'ii');
-echo $nnn->savybes(). '<br>';
+$nnn = new universitetas('LSMU', 'Kaunas', '20');
+echo $nnn->info(). '<br>';
 var_dump($nnn);
 
 class ktu extends universitetas{
@@ -89,7 +87,7 @@ class ktu extends universitetas{
         return sprintf($un2, $this->pavadinimas, $this->miestas, $this->studentai);
     }
 }
-$nnn2 = new ktu('uuu', 'Kaunas', '100', 'infoK');
+$nnn2 = new ktu('uuu', 'Kaunas', '100');
 echo $nnn2->klases(). '<br>';
 var_dump($nnn2);
 
@@ -99,7 +97,7 @@ class vu extends universitetas{
         return sprintf($un3, $this->pavadinimas, $this->miestas, $this->studentai);
     }
 }
-$nnn3 = new vu('vvv', 'Vilnius', '200', 'infoV');
+$nnn3 = new vu('vvv', 'Vilnius', '200');
 echo $nnn3->klases(). '<br>';
 var_dump($nnn3);
 ?>
