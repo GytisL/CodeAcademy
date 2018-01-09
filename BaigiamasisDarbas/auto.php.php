@@ -44,13 +44,22 @@ class auto {
         return $cars;
     }
     function delete($id){
-
-
+        $ok = false;
+        $this->message = "Automobilio pašalinimas iš DB";
+        try {
+            $sql = "delete from auto where aut_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([':id'=>$id]);
+            $this->message .= "Automobilis pašalintas sėkmingai";
+            $ok = true;
+        } catch (PDOException $e) {
+            $this->message .= 'Automobilio pašalinimas nesėkmingas: ' . $e->getMessage();
+        }
+        return $ok;
     }
 }
 //$a = new auto();
 //var_dump($a);
 //$b = $a->getList();
 //var_dump($b);
-
 ?>
