@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<link>
+<html lang="lt">
 <head>
     <meta charset="UTF-8">
     <title>Automobilių nuomos internetinė informacinė sistema - šalinimas | UAB Auto 7/24</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -22,7 +22,7 @@
     <?php include 'auto-header.php' ?>
     <div class="mx-auto site-body mt-1">
 <?php
-include 'auto.php.php';
+include 'auto.php';
 if(isset($_POST['delete'])){
     include 'auto-delete.php';
 }
@@ -32,7 +32,7 @@ elseif(isset($_POST['update-form'])){
 elseif(isset($_POST['rent-form'])){
     include 'auto-rent-form.php';
 }
-else include 'auto-insert-form.php';
+else include 'auto-update-form.php';
 ?>
     </div>
 </div>
