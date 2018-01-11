@@ -35,7 +35,7 @@
     ];
     $ok = true;
     if(isset($_POST['id'])){
-        $car['id']=$_POST['id'];
+        $car['id'] = $_POST['id'];
     }
     if(isset($_FILES["nuotrauka"]) && strlen($_FILES["nuotrauka"]['name'])>0){
         $message = 'upload';
@@ -61,12 +61,13 @@
     //var_dump($car);
     //exit;
 
-    if ($ok){
-        if(isset($car['id'])){
-        }$ok = $auto->insert($car);
+if ($ok) {
+    if (strlen($car['id']) > 0) {
+        $ok = $auto->update($car);
+    } else {
+        $ok = $auto->insert($car);
     }
-
-        if ($ok) $bg = 'bg-success'; else $bg = 'bg-danger';
+    if ($ok) $bg = 'bg-success'; else $bg = 'bg-danger';
         $message = $auto->message;
     }
     echo

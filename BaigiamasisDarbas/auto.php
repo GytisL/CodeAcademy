@@ -6,7 +6,6 @@ class auto{
     private $dbname = 'test';
     private $userid = 'root';
     private $password = 'test';
-
     function __construct(){
         $this->message = "Prisijungimas prie DB ";
         try {
@@ -18,7 +17,6 @@ class auto{
             $this->message = "Prisijungimas nesėkmingas: " . $e->getMessage();
         }
     }
-
     function getList(){
         $this->message = "Automobilių sarašo skaitymas iš DB";
         $cars = [];
@@ -43,7 +41,6 @@ class auto{
         }
         return $cars;
     }
-
     function delete($id)
     {
         $ok = false;
@@ -59,7 +56,6 @@ class auto{
         }
         return $ok;
     }
-
     /*function insert($car){
         $ok = false;
         $this->message = "Automobilio įkėlimas į DB";
@@ -80,11 +76,10 @@ class auto{
         }
         return $ok;
     }*/
-
     function insert($car){
         $ok = false;
         $this->message = "Automobilio įkėlimas į DB: ";
-        try {
+        try{
             $sql = "insert into auto (aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos, aut_mime, aut_nuotrauka) values(?, ?, ?, ?, ?, ?, ?)";
             $res = $this->cnn->prepare($sql);
             $res->bindValue(1, $car['gamintojas']);
@@ -99,10 +94,9 @@ class auto{
             $ok = true;
         } catch (PDOException $e) {
             $this->message .= 'Automobilio įkėlimas nesėkmingas: ' . $e->getMessage();
-        }
+          }
         return $ok;
     }
-
     function update($car){
         $ok = false;
         $this->message = "Automobilio duomenų keitimas DB: ";
@@ -131,18 +125,15 @@ class auto{
             $ok = true;
         } catch (PDOException $e) {
             $this->message .= 'Automobilio įkėlimas nesėkmingas: ' . $e->getMessage();
-        }
+         }
         return $ok;
     }
-
-
-    function get($id)
-    {
+    function get($id){
         $this->message = "Automobilio duomenų skaitymas iš DB: ";
         try {
             $sql = "select aut_id, aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos, aut_nuotrauka, aut_mime from auto where aut_id=:id";
             $res = $this->cnn->prepare($sql);
-            $res->execute([':id' => $this->$id]);
+            $res->execute([':id' => $id]);
             if ($row = $res->fetch()) {
                 $car = [
                     'id' => $row['aut_id'],
@@ -159,7 +150,7 @@ class auto{
         } catch (PDOException $e) {
             $this->message .= 'Nesėkmingas: ' . $e->getMessage();
             $car = false;
-        }
+         }
         return $car;
     }
 }

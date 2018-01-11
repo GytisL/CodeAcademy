@@ -37,8 +37,6 @@ if ($car === false){
         'mime' => '',
         'nuotrauka' => ''
     ];
-
-
 }
 ?>
 <form method="post" action="auto-update.php" enctype="multipart/form-data">

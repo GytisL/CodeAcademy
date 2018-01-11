@@ -15,18 +15,18 @@
         </tr>
     </table>
 </div>
-<div class="site-menu">
-    <div class="mx-auto">
-        <nav class="navbar navbar-expand-sm m-0 p-0">
-            <ul class="navbar-nav nav-pills">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/BaigiamasisDarbas"><i class="fa fa-home" aria-hidden="true"></i>Titulinis</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/BaigiamasisDarbas/auto-actions.php"><i class="fa fa-car" aria-hidden="true"></i>Įdėti naują automobilį</a>
-                </li>
-            </ul>
-        </nav>
+    <div class="site-menu">
+        <div class="mx-auto">
+            <nav class="navbar navbar-expand-sm m-0 p-0">
+                <ul class="navbar-nav nav-pills">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/BaigiamasisDarbas"><i class="fa fa-home" aria-hidden="true"></i>Titulinis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/BaigiamasisDarbas/auto-actions.php"><i class="fa fa-car" aria-hidden="true"></i>Įdėti naują automobilį</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
 </div>

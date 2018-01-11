@@ -3,7 +3,6 @@ include 'auto.php';
 $aut = new auto();
 $cars = $aut->getList();
 ?>
-
 <!DOCTYPE html>
 <html lang="lt">
 <link>
@@ -24,7 +23,6 @@ $cars = $aut->getList();
     <!--   -->
     <link rel="stylesheet" href="/BaigiamasisDarbas/auto.css" type="text/css">
 </head>
-
 <body>
 <div class="container-flex">
     <?php include 'auto-header.php' ?>
@@ -51,11 +49,10 @@ $cars = $aut->getList();
                         echo '<td>' . $car['metai'] . '</td>';
                         echo '<td>' . $car['kaina'] . '</td>';
                         echo '<td style="white-space: nowrap">
-                        
-    <button class="btn btn-danger mr-1" type="submit" name="delete" value=" . $car["id"]">Pašalinti</button>
-    <button class="btn btn-info mr-1" type="submit" name="update-form" value=" . $car["id"]">Redaguoti</button>
-    <button class="btn btn-success" type ="submit" name="rent-form" value=" . $car["id"]">Užsakyti</button></td>';
-                    echo '</tr>';
+                            <button class="btn btn-danger mr-1" type="submit" name="delete" value=" . $car["id"]">Pašalinti</button>
+                            <button class="btn btn-info mr-1" type="submit" name="update-form" value=" . $car["id"]">Redaguoti</button>
+                            <button class="btn btn-success" type ="submit" name="rent-form" value=" . $car["id"]">Užsakyti</button></td>';
+                        echo '</tr>';
                         }
                     ?>
                 </tbody>

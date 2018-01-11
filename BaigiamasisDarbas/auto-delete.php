@@ -5,13 +5,11 @@ if (isset($_POST['delete'])){
     if ($ok) $bg = 'bg-success'; else $bg = 'bg-danger';
     $message = $auto->message;
     $color = 'white';
-}
-else {
+} else {
     $bg = 'bg-danger';
     $message = 'Neleistinas veiksmas';
     $color = 'red';
-}
-echo
+} echo
     '<div class="jumbotron p-2 ' . $bg . '">' .
     '<p style="color: ' . $color .'; font-size: 32px; text-align: center">' . $message . '</p>' .
     '</div>';
