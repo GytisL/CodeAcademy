@@ -129,6 +129,7 @@ class auto{
         return $ok;
     }
     function get($id){
+        $car = false;
         $this->message = "Automobilio duomenų skaitymas iš DB: ";
         try {
             $sql = "select aut_id, aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos, aut_nuotrauka, aut_mime from auto where aut_id=:id";
