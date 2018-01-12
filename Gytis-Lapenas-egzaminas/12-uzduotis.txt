@@ -1,0 +1,2 @@
+
+select id, imone, imone_kodas, kliento_tipas, kliento_registravimo_data from imones order by kliento_registravimo_data desc limit 0,5
