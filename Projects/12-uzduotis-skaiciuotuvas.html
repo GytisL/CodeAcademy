@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matavimo vietu konverteris su bootstrap</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="12-uzduotis-skaiciuotuvas.css"/>
+<script>
+    function Calc(){
+        //reikia nuskaityti metrus
+        var meters = document.getElementById("result").value;
+        //console.log(meters); //patikrinimas
+
+        //tada reikia nuspresti ant ko dalinti
+        var unit = document.getElementById("unit").value;
+        //console.log(unit); //patikrinimas
+
+        //tada padalinti
+        var result = 0;
+
+        if(unit == "meter"){
+            result = meters * 100;
+        }else if(unit == "inch"){
+            result = meters * 39,37;
+        }else if(unit == "feet"){
+            result = meters * 3,28;
+        }else{
+            //TODO: sugalvot kaip parodit kad iviko klaida
+        }
+        //pavaizduoti rezultata
+        document.getElementById("result").value = result;
+
+    }
+</script>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div id="app">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label for="meter">Metrai</label>
+                            <input type="text" class="form-control" id="meter" placeholder="metrai...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2"> = </div>
+
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label for="result">Rezultatas</label>
+                            <input type="text" class="form-control" id="result" placeholder="rezultatas...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <select id="unit">
+                        <option value="cm">cm</option>
+                        <option value="inch">inch</option>
+                        <option value="feet">feet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button id="calc" class="btn btn-success" onclick="Calc()" >Convert</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

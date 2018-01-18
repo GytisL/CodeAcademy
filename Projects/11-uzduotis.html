@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS uzduotis basic math2</title>
+    <script>
+        function Suma(){
+            var a_text = document.getElementById("nr1").value;
+            var b_text = document.getElementById("nr2").value;
+            var c_text = document.getElementById("nr3").value;
+
+            var a = parseFloat(a_text);
+            var b = parseFloat(b_text);
+            var c = parseFloat(c_text);
+            var res = a + b + c;
+
+            //parodomas rezultatas
+            document.getElementById("result").value = c;
+        }
+
+        //ka turi padaryti: Ar mes norim su Sum ar Divide ar Multiply?
+            var o = "+";//calc operatorius pagal nutylejima yra '+'
+
+        //ka turi padaryti: atvaizduoti rezultata
+    </script>
+</head>
+<body>
+
+
+<div>
+    <input type="text" id="nr1" placeholder="a"/> +
+    <input type="text" id="nr2" placeholder="b"/> +
+    <input type="text" id="nr3" placeholder="c"/> =
+    <input type="text" id="result" placeholder="result" />
+</div>
+
+<div>
+    <button id="Sum" onclick="Suma()">Suma</button>
+
+</div>
+
+</body>
+</html>

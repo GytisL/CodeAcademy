@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS uzduotis</title>
+    <script>
+        function showtext(){
+            //document.getElementById("result").innerHTML = "Mygtukas veikia!";
+            var vardas = document.getElementById("vardas").value;
+            var pavarde = document.getElementById("pavarde").value;
+            var t = "Labas rytas " + vardas + " " + pavarde + "!";
+
+            var kreipinys = pakeisti_teksta(vardas);
+            console.log("Labas " + kreipinys);
+
+            document.getElementById("result").innerHTML = t;
+            //console.log();//patikrinimas rezultato
+        }
+        function pakeisti_teksta(tekstas){
+            var x = tekstas + "ai";
+
+            x = x + " :)";
+            x = x + " Ketvirtadienis";
+            return x;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button id="btn" onclick = "showtext()">GO!</button>
+    </div>
+
+    <div>
+        Vardas:
+        <input type="text" id="vardas" placeholder="Įveskite vardą"/>
+    </div>
+
+    <div>
+        Pavarde:
+        <input type="text" id="pavarde" placeholder="Įveskite pavardę"/>
+    </div>
+
+    <div id="result">
+
+    </div>
+</body>
+</html>
