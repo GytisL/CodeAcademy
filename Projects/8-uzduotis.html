@@ -63,11 +63,21 @@
     <div id="result">
     </div>
 
-    <div>
-        <button>
-        Click count <!--sukurti funkcija kuri pridetu po viena skaiciu-->
-        </button>
-    </div>
+
+
+    <script>
+
+
+        var clicks = 0;
+        function counter() {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        };
+    </script>
+    <button type="button" onclick="counter()">Click count</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+
 
 
     <script src="1-script.js"></script>
