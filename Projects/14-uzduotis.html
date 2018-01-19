@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>JS uzduotis 4</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="14-uzduotis.css">
+
+    <script>
+    /*function compare(){
+        var type1 = document.getElementById("word1").value;
+        //console.log(type1); //patikrinimas
+
+        var type2 = document.getElementById("word2").value;
+        //console.log(type2); //patikrinimas
+
+        var result = "";
+
+        if(type1 == type2){
+            result = "Šitie žodžiai yra vienodi";
+        }else {
+            result = "Šitie žodžiai yra nevienodi";
+        }
+        document.getElementById("result").value = result;
+    }*/
+</script>
+
+    <script>
+        function change(){
+            //kadangi input fieldas - reikia naudoti "value"
+            var t = document.getElementById("text1").value;//.value enaudojama kai reikia irasyti kazka i lauka// kur kweisti
+            var f1 = document.getElementById("fraze").value;//ka keisti
+            var f2 = "testas";//i ka keisti
+
+            //console.log(t); //patikrinami kintamieji
+            //console.log(f1);//patikrinami kintamieji
+            //console.log(f2);
+
+            //reikia apkeisti fraze musu tekste.
+            var res = "";
+            res = t.replace(f1, f2);
+            //console.log(res);// ar kodas tikrai veikia
+
+            //reikia atvaizduoti rezultata
+            document.getElementById("result").innerHtml = res; //prie div rasoma .innerHtml
+        }
+    </script>
+
+
+</head>
+<!--<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div id="app">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label for="word1">Pirmas žodis</label>
+                                <input type="text" class="form-control" id="word1" placeholder="Įrašykite žodį">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2"> </div>
+
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label for="word2">Antras žodis</label>
+                                <input type="text" class="form-control" id="word2" placeholder="Įrašykite žodį">
+                            </div>
+                        </div>
+                    </div>
+
+                        <div align="center">//mygtukas padedamas i centra
+                    <div>
+                        <button type="button" class="btn btn-success" onclick="compare()">Palyginti</button>
+                    </div>
+                        </div>
+
+                    <div class="form-group" >
+                    <label for="result">Rezultatas</label>
+                        <div class="mano-ilgis">
+                            <input type="text" class="form-control" id="result">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>-->
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="app">
+                <div class="form-group">
+                    <label for="text1" class="special-font">Tekstas</label>
+                    <textarea rows="4" cols="50" type="text" class="form-control" id="text1" placeholder="irasikite savo teksta..."> </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fraze" class="special-font">Fraze</label>
+                    <input type="text" class="form-control" id="fraze" placeholder="fraze..." />
+                </div>
+
+                <div>
+                    <button id="mainbutton" class="btn btn-primary btn-xs special-font" onclick="change()">
+                        <i class="fa fa-check" aria-hidden="true"></i> Pakeisti</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div id="result" class="special-font">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

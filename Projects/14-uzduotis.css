@@ -1,0 +1,35 @@
+/*body{
+    background:url("/Projects/dubai.jpg");
+}
+
+#app{
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.mano-ilgis{
+    width: 70%;
+}
+
+.result{
+
+    width: 100%;
+    text-align: center;
+
+}
+*/
+#app{
+    border:1px solid #aaa;
+    padding: 30px;
+    color: white;
+}
+
+.special-font{
+    font-family: 'Macondo', cursive;
+}
+
+#result{
+    fonsize: 29px;
+}
