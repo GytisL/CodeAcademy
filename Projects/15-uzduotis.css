@@ -1,0 +1,16 @@
+body{
+    background:url("/Projects/dubai.jpg");
+}
+#app{
+    border:1px solid #aaa;
+    padding: 30px;
+    color: white;
+}
+
+.special-font{
+    font-family: 'Macondo', cursive;
+}
+
+#result{
+    font-size: 29px;
+}

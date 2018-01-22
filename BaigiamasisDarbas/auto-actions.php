@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/BaigiamasisDarbas/auto.css" type="text/css">
 </head>
 <body>
+
 <div class="container-flex">
     <?php include 'auto-header.php' ?>
     <div class="mx-auto site-body mt-1">

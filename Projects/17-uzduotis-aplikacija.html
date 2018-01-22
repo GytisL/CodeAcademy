@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/Projects/17-uzduotis.css"/>
+
+    <script>
+    /* function gorainbow_random(){
+         //atsitiktinio ksaiciaus sukurimas
+         //console.log("gorainbow works!");
+         var rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+         //random number between 0-7
+         var r = Math.floor(7*Math.random());
+         //console.log(r);
+         document.body.style.background = rainbow[r];
+     }*/
+    </script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
+            <div id="app">
+                <div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Spalva</label>
+                        <div class="col-sm-10">
+                            <input id="color" class="form-control" name="color" value="" placeholder="iveskite spalva...."  />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="add" class="btn btn-primary" onclick="addToArray()" >Prideti nauja spalva</button>
+                    <button id="remove" class="btn btn-primary" onclick="removeFromArray()" >Pasalinti spalva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/Projects/17-script.js"></script>
+</body>
+</html>
