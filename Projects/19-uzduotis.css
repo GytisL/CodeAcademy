@@ -1,0 +1,17 @@
+body{
+    background:url('../Projects/dubai.jpg'); background-size: cover;
+}
+
+.container-position{
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+.formwrapper{
+    background:#fff;
+    padding:15px;
+}
+
+.fullwidth{
+    width:100%;
+}

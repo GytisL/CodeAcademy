@@ -59,5 +59,10 @@ $cars = $aut->getList();
             </table>
         </form>
     </div>
+
+    <div class="container">
+        <h2>Footer</h2>
+    </div>
+
 </body>
 </html>
