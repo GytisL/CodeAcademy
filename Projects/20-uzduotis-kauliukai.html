@@ -3,22 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Kauliukų ridenimo žaidimas</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar|Macondo" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+    <link rel="stylesheet" href="20-uzduotis.css">
 
 </head>
 <body>
+
 <div class="container">
-    <div class="wrapper">
-        <div class="column">
-            <div id="rand" class="randomDice"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="col-lg-3" id="app">
+                <input type="number" id="skaicius" placeholder="skaicius" value="">
+                <button id="start"> Run </button>
+                <span id="result"> </span>
+                <span id="result1"> </span>
+                <span id="result2"> </span>
+            </div>
         </div>
-        <div class="column">
-            <button type="button" class="rollDice1">roll dice</button>
-            <h2 id="result"></h2>
+
+        <div class="col-lg-6">
+            <div class="col-lg-3">
+                <span>Win:</span>
+                <span id="result4"></span>
+            </div>
+            <div class="col-lg-3">
+                <span>Loose:</span>
+                <span id="result3"> </span>
+            </div>
         </div>
     </div>
 </div>
 
+<script src="/Projects/20-uzduotis-kauliukai.js"></script>
 </body>
 </html>

@@ -17,11 +17,12 @@ class auto{
             $this->message = "Prisijungimas nesėkmingas: " . $e->getMessage();
         }
     }
-    function getList(){
+    //sitoje vietoje padaryti paging(tam tikras skaicius masinu viename puslapyje)
+    function getList(){//ivesti ($pageSize)
         $this->message = "Automobilių sarašo skaitymas iš DB";
         $cars = [];
         try {
-            $sql = "select * from auto order by aut_gamintojas, aut_modelis";
+            $sql = "select * from auto order by aut_gamintojas, aut_modelis";//limit 3 offset 3offset praleidzia 3 masinas ir skaiciuoja nuo ketvirtos ir paima sekancias 3 masinas su limit 3
             $res = $this->cnn->query($sql);
             while ($row = $res->fetch()) {
                 $cars[] = [
