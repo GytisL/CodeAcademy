@@ -27,6 +27,12 @@ $cars = $aut->getList();
 <div class="container-flex">
     <?php include 'auto-header.php' ?>
     <div class="mx-auto site-body">
+        echo '<div>';
+            echo '<img class="masinos_paveiksliukas" src="data:' . $car['mime'] . ';base64,' . base64_encode($car['nuotrauka']) . '">';
+            echo '<div>';
+                echo '<span>' . $car['gamintojas'] . '</span>';
+                echo '</div>';
+            echo '</div>';
         <form action="auto-actions.php" method="POST">
             <table class="table table-responsive table-stripped mt-1 site-car-list">
                 <thead class="thead-light">
@@ -61,7 +67,7 @@ $cars = $aut->getList();
     </div>
 
     <div class="container">
-        <h2>Footer</h2>
+        <p style="margin-right:5px; font-size:12px; font-color:white;">@ 2018 Auto.lt Visos teises saugomos.</p>
     </div>
 
 </body>

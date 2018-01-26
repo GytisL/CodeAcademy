@@ -22,4 +22,11 @@ body{background-image: url('/BaigiamasisDarbas/car.jpg'); background-size: cover
 .site-body .site-car-list tfoot th {border-top: 1px black solid;}
 .site-body .site-car-list td {vertical-align: middle!important;}
 .site-body .btn {cursor: pointer;}
-.footer {}
+.masinos_paveiksliukas{
+    width:50px;
+}
+.footer {
+    padding:5px;
+    background-color:#777;
+
+}
