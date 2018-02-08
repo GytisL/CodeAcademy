@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My app</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Gytis-Lapenas-Frontend-egzaminas/style.css"/>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <header>
+                    <div>
+                        <h1>Gimimo diena</h1>
+                    </div>
+                </header>
+                <div id="app">
+                    <form class="form-inline">
+
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-4">
+                                <label for="name">Vardas:</label>
+                                <input type="text" name="name" class="form-control numeric" id="name" placeholder="Įveskite vardą">
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-4">
+                                <label for="date">Gimimo diena:</label>
+                                <input type="date" name="date" class="form-control numeric" id="date" rel="date" placeholder="yyyy-mm-dd">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h2>Vardas</h2>
+                            <div id="result">
+                                Gimtadienis:
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" onclick="showResult()">Rodyti</button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript masyvo susiejimas su puslapiu-->
+    <script src="/Gytis-Lapenas-Frontend-egzaminas/people.js"></script>
+    <!-- javascript susiejimas -->
+    <script src="/Gytis-Lapenas-Frontend-egzaminas/app.js"></script>
+
+</body>
+</html>

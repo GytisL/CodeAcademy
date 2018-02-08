@@ -1,0 +1,27 @@
+body{
+    padding-top: 10px;
+}
+
+header{
+    background-image:url('../Gytis-Lapenas-Frontend-egzaminas/pattern.jpg');
+    height: 140px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 40px 0;
+    color: white;
+}
+
+#app {
+    width: 100%;
+    border: black 1px solid;
+    position: relative;
+}
+
+#btn_search{
+    margin-top:15px;
+}
+
+.form-group {
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
